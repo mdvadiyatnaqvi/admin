@@ -24,34 +24,29 @@ export const Navbar = () => {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
               <li className="nav-item">
-                <span className="nav-link active" aria-current="page" href="#">
-                  <NavLink to="/">Home</NavLink>
-                </span>
+                <NavLink to="/" className="nav-link" aria-current="page">
+                  Home
+                </NavLink>
               </li>
               <li className="nav-item">
-                <span className="nav-link" href="#">
-                  <NavLink to="/about">About Us</NavLink>
-                </span>
+                <NavLink to="/about" className="nav-link">
+                  About Us
+                </NavLink>
               </li>
               <li className="nav-item">
-                <span className="nav-link" href="#">
-                  <NavLink to="/service">Services</NavLink>
-                </span>
+                <NavLink to="/service" className="nav-link">
+                  Services
+                </NavLink>
               </li>
               <li className="nav-item">
-                <span className="nav-link" href="#">
-                  <NavLink to="/contact">Contact Us</NavLink>
-                </span>
+                <NavLink to="/register" className="nav-link">
+                  Register
+                </NavLink>
               </li>
               <li className="nav-item">
-                <span className="nav-link" href="#">
-                  <NavLink to="/register">Register</NavLink>
-                </span>
-              </li>
-              <li className="nav-item">
-                <span className="nav-link" href="#">
-                  <NavLink to="/login">Login</NavLink>
-                </span>
+                <NavLink to="/login" className="nav-link">
+                  Login
+                </NavLink>
               </li>
             </ul>
           </div>

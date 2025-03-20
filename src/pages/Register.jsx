@@ -10,13 +10,13 @@ export const Register = () => {
   });
 
   const handleInputChange = (e) => {
-    setUser((user) => ({ ...user, [e.target.name]: e.target.value }));
+    const userAttribute = e.target.name;
+    const userAttributeValue = e.target.value;
+    setUser((user) => ({ ...user, [userAttribute]: userAttributeValue }));
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(user);
-    // Further actions like API calls can be added here
   };
 
   return (
@@ -26,7 +26,7 @@ export const Register = () => {
         <input
           type="text"
           name="username"
-          placeholder="Username"
+          placeholder="Username*"
           value={user.username}
           onChange={handleInputChange}
           required
@@ -35,7 +35,7 @@ export const Register = () => {
         <input
           type="email"
           name="email"
-          placeholder="Email"
+          placeholder="Email*"
           value={user.email}
           onChange={handleInputChange}
           required
@@ -44,7 +44,7 @@ export const Register = () => {
         <input
           type="tel"
           name="phone"
-          placeholder="Phone"
+          placeholder="Phone*"
           value={user.phone}
           onChange={handleInputChange}
           required
@@ -53,7 +53,7 @@ export const Register = () => {
         <input
           type="password"
           name="password"
-          placeholder="Password"
+          placeholder="Password*"
           value={user.password}
           onChange={handleInputChange}
           required
