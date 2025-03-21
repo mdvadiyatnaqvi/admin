@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export const Register = () => {
+  const navigate = useNavigate();
+
   const [user, setUser] = useState({
     username: "",
     email: "",
@@ -30,8 +33,8 @@ export const Register = () => {
       });
       console.log("Response is: ", response);
       if (response.ok) {
-        alert("Registration successful!");
-        window.location.reload(); // Refresh the page after successful registration
+        setUser({ username: "", email: "", phone: "", password: "" });
+        navigate("/admin/login");
       }
     } catch (error) {
       console.error("Error:", error);

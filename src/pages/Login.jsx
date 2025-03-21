@@ -12,9 +12,29 @@ export const Login = () => {
     setUser((user) => ({ ...user, [userAttribute]: userAttributeValue }));
   };
 
-  const handleSubmit = (e) => {
+  const URL = "https://mern-app-fknl.onrender.com/login";
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     // Perform login logic here
+
+    try {
+      const response = await fetch(URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+      });
+      if (response.ok) {
+        // Redirect to admin dashboard or home page
+        setUser({ email: "", password: "" });
+        alert("Login successful");
+        navigate("/");
+      }
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -40,7 +60,7 @@ export const Login = () => {
           required
         />
         <br />
-        <button type="submit">Register</button>
+        <button type="submit">Login</button>
       </form>
     </>
   );
