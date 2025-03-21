@@ -18,22 +18,22 @@ export const Navbar = () => {
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/about" className="nav-link">
+                <NavLink to="/admin/about" className="nav-link">
                   About Us
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/service" className="nav-link">
+                <NavLink to="/admin/service" className="nav-link">
                   Services
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/register" className="nav-link">
+                <NavLink to="/admin/register" className="nav-link">
                   Register
                 </NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/login" className="nav-link">
+                <NavLink to="/admin/login" className="nav-link">
                   Login
                 </NavLink>
               </li>
