@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
+  const navigate = useNavigate();
+
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -29,7 +32,7 @@ export const Login = () => {
       if (response.ok) {
         // Redirect to admin dashboard or home page
         setUser({ email: "", password: "" });
-        alert("Login successful");
+        // alert("Login successful");
         navigate("/");
       }
     } catch (error) {
