@@ -15,8 +15,28 @@ export const Register = () => {
     setUser((user) => ({ ...user, [userAttribute]: userAttributeValue }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    const URL = "https://mern-app-fknl.onrender.com/register";
+
+    try {
+      const response = await fetch(URL, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(user),
+      });
+      console.log("Response is: ", response);
+      if (response.ok) {
+        alert("Registration successful!");
+        window.location.reload(); // Refresh the page after successful registration
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Failed to register. Please try again.");
+    }
   };
 
   return (
