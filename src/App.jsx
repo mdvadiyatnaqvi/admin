@@ -15,10 +15,10 @@ const App = () => {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/service" element={<Service />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/admin/about" element={<About />} />
+          <Route path="/admin/service" element={<Service />} />
+          <Route path="/admin/login" element={<Login />} />
+          <Route path="/admin/register" element={<Register />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>
