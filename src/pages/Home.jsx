@@ -2,9 +2,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js";
 import { NavLink } from "react-router-dom";
 import "./Home.css";
-import image1 from "../../public/images/code1.jpg";
-import image2 from "../../public/images/code2.jpg";
-import image3 from "../../public/images/code3.jpg";
+import image1 from "/images/code1.jpg";
+import image2 from "/images/code2.jpg";
+import image3 from "/images/code3.jpg";
 
 export const Home = () => {
   return (
