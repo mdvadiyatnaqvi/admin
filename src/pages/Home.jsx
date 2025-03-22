@@ -13,7 +13,7 @@ export const Home = () => {
               <div>
                 <h2>What We Do</h2>
                 <p>
-                  At Tech Solutions, we specialize in providing top-notch IT
+                  At N-Tech Global's, we specialize in providing top-notch IT
                   services tailored to your needs. From custom software
                   development to IT consulting, we have you covered.
                 </p>
