@@ -1,10 +1,13 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { InputField } from "../components/custom-components/InputField";
+import { useAuth } from "../store/Auth";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export const Register = () => {
   const navigate = useNavigate();
+
+  const { storeTokenInLS } = useAuth();
 
   const [user, setUser] = useState({
     username: "",
@@ -32,8 +35,10 @@ export const Register = () => {
         },
         body: JSON.stringify(user),
       });
-      console.log("Response is: ", response);
       if (response.ok) {
+        const res_data = await response.json();
+        storeTokenInLS(res_data.token);
+        // localStorage.setItem("token", res_data.token);
         setUser({ username: "", email: "", phone: "", password: "" });
         navigate("/admin/login");
       }
