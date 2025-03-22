@@ -11,16 +11,30 @@ export const Navbar = () => {
     navRef.current.classList.toggle("responsive_nav");
   };
 
+  const hideNavbar = () => {
+    navRef.current.classList.remove("responsive_nav");
+  };
+
   return (
     <header className="navbar sticky-top">
       <h3 style={{ marginLeft: "30px" }}>N-Tech</h3>
       <nav ref={navRef}>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/admin/about">About Us</NavLink>
-        <NavLink to="/admin/service">Services</NavLink>
-        <NavLink to="/admin/register">Register</NavLink>
-        <NavLink to="/admin/login">Login</NavLink>
-        <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+        <NavLink to="/" onClick={hideNavbar}>
+          Home
+        </NavLink>
+        <NavLink to="/admin/about" onClick={hideNavbar}>
+          About Us
+        </NavLink>
+        <NavLink to="/admin/service" onClick={hideNavbar}>
+          Services
+        </NavLink>
+        <NavLink to="/admin/register" onClick={hideNavbar}>
+          Register
+        </NavLink>
+        <NavLink to="/admin/login" onClick={hideNavbar}>
+          Login
+        </NavLink>
+        <button className="nav-btn nav-close-btn" onClick={hideNavbar}>
           <FaTimes />
         </button>
       </nav>
