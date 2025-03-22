@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./Navbar.css";
 
 export const Navbar = () => {
@@ -11,8 +12,8 @@ export const Navbar = () => {
   };
 
   return (
-    <header>
-      <h3>N-Tech</h3>
+    <header className="navbar sticky-top">
+      <h3 style={{ marginLeft: "10px" }}>N-Tech</h3>
       <nav ref={navRef}>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/admin/about">About Us</NavLink>

@@ -74,7 +74,6 @@ export const Footer = () => {
             <div className="col-md-5 offset-md-1 mb-3">
               <form>
                 <h5>Subscribe to our newsletter</h5>
-                <p>Monthly digest of what's new and exciting from us.</p>
                 <div className="d-flex flex-column flex-sm-row w-100 gap-2">
                   <label htmlFor="newsletter1" className="visually-hidden">
                     Email address
@@ -94,7 +93,7 @@ export const Footer = () => {
           </div>
         </footer>
       </div>
-      <div className="bg-dark text-white d-flex flex-column flex-sm-row justify-content-center py-4 my-4 border-top">
+      <div className="bg-dark text-white d-flex flex-column flex-sm-row justify-content-center py-3 border-top">
         <p>© 2025 Company, Inc. All rights reserved.</p>
       </div>
     </>

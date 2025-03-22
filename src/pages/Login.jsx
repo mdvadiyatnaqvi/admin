@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Login.css";
+import { InputField } from "../components/custom-components/InputField";
 
 export const Login = () => {
   const navigate = useNavigate();
@@ -42,29 +44,29 @@ export const Login = () => {
 
   return (
     <>
-      <h1>Login</h1>
-
-      <form onSubmit={handleSubmit}>
-        <input
-          type="email"
-          name="email"
-          placeholder="Email*"
-          value={user.email}
-          onChange={handleInputChange}
-          required
-        />
-        <br />{" "}
-        <input
-          type="password"
-          name="password"
-          placeholder="Password*"
-          value={user.password}
-          onChange={handleInputChange}
-          required
-        />
-        <br />
-        <button type="submit">Login</button>
-      </form>
+      <div className="login-container mt-3">
+        <h2 className="text-center">Log In</h2>
+        <p className="separator"></p>
+        <form onSubmit={handleSubmit} className="login-form">
+          <InputField
+            type="email"
+            placeholder="Email address*"
+            value={user.email}
+            onChange={handleInputChange}
+            name="email" // Added name prop
+          />
+          <InputField
+            type="password"
+            placeholder="Enter Password*"
+            value={user.password}
+            onChange={handleInputChange}
+            name="password" // Added name prop
+          />
+          <button type="submit" className="login-button">
+            Log In
+          </button>
+        </form>
+      </div>
     </>
   );
 };
