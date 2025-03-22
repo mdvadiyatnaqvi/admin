@@ -1,46 +1,31 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+import { useRef } from "react";
 import { NavLink } from "react-router-dom";
+import { FaBars, FaTimes } from "react-icons/fa";
+import "./Navbar.css";
 
 export const Navbar = () => {
+  const navRef = useRef();
+
+  const showNavbar = () => {
+    navRef.current.classList.toggle("responsive_nav");
+  };
+
   return (
-    <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid">
-          <NavLink to="/" className="navbar-brand">
-            N-Tech
-          </NavLink>
-          <div className="" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <NavLink to="/" className="nav-link" aria-current="page">
-                  Home
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink to="/admin/about" className="nav-link">
-                  About Us
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink to="/admin/service" className="nav-link">
-                  Services
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink to="/admin/register" className="nav-link">
-                  Register
-                </NavLink>
-              </li>
-              <li className="nav-item">
-                <NavLink to="/admin/login" className="nav-link">
-                  Login
-                </NavLink>
-              </li>
-            </ul>
-          </div>
-        </div>
+    <header>
+      <h3>N-Tech</h3>
+      <nav ref={navRef}>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/admin/about">About Us</NavLink>
+        <NavLink to="/admin/service">Services</NavLink>
+        <NavLink to="/admin/register">Register</NavLink>
+        <NavLink to="/admin/login">Login</NavLink>
+        <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+          <FaTimes />
+        </button>
       </nav>
-    </>
+      <button className="nav-btn" onClick={showNavbar}>
+        <FaBars />
+      </button>
+    </header>
   );
 };
