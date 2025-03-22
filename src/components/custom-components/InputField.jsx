@@ -18,7 +18,7 @@ export const InputField = ({ type, placeholder, value, onChange, name }) => {
           onClick={() => setIsPasswordShown((prevState) => !prevState)}
           className="material-symbols-rounded eye-icon"
         >
-          {isPasswordShown ? "Show" : "Hide"}
+          {isPasswordShown ? "Hide" : "Show"}
         </i>
       )}
     </div>

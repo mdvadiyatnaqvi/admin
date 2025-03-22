@@ -78,12 +78,12 @@
   outline: none;
   font-size: 1.06rem;
   border-radius: 0.31rem;
-  border: 1px solid #bfb3f2;
+  border: 1px solid rgba(33, 37, 41, 1);
   padding: 0px 1.25rem 0 3.12rem;
   transition: 0.2s ease;
 }
 .login-form .input-field:focus {
-  border-color: #5f41e4;
+  border-color: rgba(33, 37, 41, 1);
 }
 .login-form .input-field::placeholder {
   color: #9284c8;
@@ -134,8 +134,12 @@
   background: #5f41e4;
   transition: 0.3s ease;
 }
+.login-button {
+  background: rgba(33, 37, 41, 1) !important;
+}
+
 .login-form .login-button:hover {
-  background: #4320df;
+  background: #000;
 }
 .login-container .signup-prompt {
   text-align: center;

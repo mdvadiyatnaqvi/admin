@@ -13,7 +13,7 @@ export const Navbar = () => {
 
   return (
     <header className="navbar sticky-top">
-      <h3 style={{ marginLeft: "10px" }}>N-Tech</h3>
+      <h3 style={{ marginLeft: "30px" }}>N-Tech</h3>
       <nav ref={navRef}>
         <NavLink to="/">Home</NavLink>
         <NavLink to="/admin/about">About Us</NavLink>

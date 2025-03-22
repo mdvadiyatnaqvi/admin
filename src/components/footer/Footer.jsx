@@ -84,7 +84,14 @@ export const Footer = () => {
                     className="form-control"
                     placeholder="Email address"
                   />
-                  <button className="btn btn-primary" type="button">
+                  <button
+                    className="btn btn-primary"
+                    type="button"
+                    style={{
+                      backgroundColor: "rgb(33, 37, 41 )",
+                      border: "none",
+                    }}
+                  >
                     Subscribe
                   </button>
                 </div>
@@ -94,7 +101,9 @@ export const Footer = () => {
         </footer>
       </div>
       <div className="bg-dark text-white d-flex flex-column flex-sm-row justify-content-center py-3 border-top">
-        <p>© 2025 Company, Inc. All rights reserved.</p>
+        <p style={{ paddingLeft: "20px" }}>
+          © 2025 Company, Inc. All rights reserved.
+        </p>
       </div>
     </>
   );

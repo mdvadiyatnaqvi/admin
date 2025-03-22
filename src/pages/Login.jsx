@@ -53,14 +53,14 @@ export const Login = () => {
             placeholder="Email address*"
             value={user.email}
             onChange={handleInputChange}
-            name="email" // Added name prop
+            name="email"
           />
           <InputField
             type="password"
             placeholder="Enter Password*"
             value={user.password}
             onChange={handleInputChange}
-            name="password" // Added name prop
+            name="password"
           />
           <button type="submit" className="login-button">
             Log In
