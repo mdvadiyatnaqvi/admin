@@ -10,10 +10,10 @@ export const Footer = () => {
         }}
       >
         <div className="container">
-          <footer className="py-5">
+          <footer style={{ paddingTop: "20px" }}>
             <div className="row">
               <div className="col-12 col-md-2 mb-3">
-                <h3>N-Tech Global</h3>
+                <h3 style={{ fontWeight: "bold" }}>N-Tech Global</h3>
               </div>
 
               <div className="col-12 col-md-2 mb-3">
