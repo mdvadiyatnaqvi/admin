@@ -7,6 +7,7 @@ import { Login } from "./pages/Login";
 import { Register } from "./pages/Register";
 import { Error } from "./pages/Error";
 import { Navbar } from "./components/navbar/Navbar";
+import { Footer } from "./components/footer/Footer";
 
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
           <Route path="/admin/register" element={<Register />} />
           <Route path="*" element={<Error />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );
