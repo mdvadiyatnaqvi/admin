@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { InputField } from "../components/custom-components/InputField";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export const Register = () => {
@@ -44,8 +45,45 @@ export const Register = () => {
 
   return (
     <>
-      <h1>Register</h1>
-      <form onSubmit={handleSubmit}>
+      <div className="login-container mt-3">
+        <h2 className="text-center">Register</h2>
+        <p className="separator"></p>
+        <form onSubmit={handleSubmit} className="login-form">
+          <InputField
+            type="text"
+            placeholder="Email Username*"
+            value={user.username}
+            onChange={handleInputChange}
+            name="username"
+          />
+          <InputField
+            type="email"
+            placeholder="Email address*"
+            value={user.email}
+            onChange={handleInputChange}
+            name="email"
+          />
+          <InputField
+            type="tel"
+            placeholder="Email Phone*"
+            value={user.phone}
+            onChange={handleInputChange}
+            name="phone"
+          />
+          <InputField
+            type="password"
+            placeholder="Enter Password*"
+            value={user.password}
+            onChange={handleInputChange}
+            name="password"
+          />
+          <button type="submit" className="login-button">
+            Register
+          </button>
+        </form>
+      </div>
+
+      {/* <form onSubmit={handleSubmit}>
         <input
           type="text"
           name="username"
@@ -83,7 +121,7 @@ export const Register = () => {
         />
         <br />
         <button type="submit">Register</button>
-      </form>
+      </form> */}
     </>
   );
 };
