@@ -1,11 +1,14 @@
 import { useRef } from "react";
 import { NavLink } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { useAuth } from "../../store/Auth";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Navbar.css";
 
 export const Navbar = () => {
   const navRef = useRef();
+
+  const { isLoggedIn } = useAuth();
 
   const showNavbar = () => {
     navRef.current.classList.toggle("responsive_nav");
@@ -28,12 +31,21 @@ export const Navbar = () => {
         <NavLink to="/admin/service" onClick={hideNavbar}>
           Services
         </NavLink>
-        <NavLink to="/admin/register" onClick={hideNavbar}>
-          Register
-        </NavLink>
-        <NavLink to="/admin/login" onClick={hideNavbar}>
-          Login
-        </NavLink>
+        {isLoggedIn ? (
+          <NavLink to="/admin/logout" onClick={hideNavbar}>
+            Logout
+          </NavLink>
+        ) : (
+          <>
+            <NavLink to="/admin/register" onClick={hideNavbar}>
+              Register
+            </NavLink>
+            <NavLink to="/admin/login" onClick={hideNavbar}>
+              Login
+            </NavLink>
+          </>
+        )}
+
         <button className="nav-btn nav-close-btn" onClick={hideNavbar}>
           <FaTimes />
         </button>
